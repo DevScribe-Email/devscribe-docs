@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdevscribe_docs=self.webpackChunkdevscribe_docs||[]).push([[5664],{5847:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/devscribe-docs/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
