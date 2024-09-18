@@ -1,0 +1,155 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "DevScribe.Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/code-snippet/toHtml": {
+      "post": {
+        "tags": [
+          "Code Snippets"
+        ],
+        "operationId": "Code To HTML",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ConvertToHtmlRequest"
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/code-snippet/languages": {
+      "get": {
+        "tags": [
+          "Code Snippets"
+        ],
+        "operationId": "List Languages",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/code-snippet/themes": {
+      "get": {
+        "tags": [
+          "Code Snippets"
+        ],
+        "operationId": "List Themes",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/markdown/toHtml": {
+      "post": {
+        "tags": [
+          "Markdown"
+        ],
+        "operationId": "Markdown To Html",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/MarkdownRequest"
+                  }
+                ]
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ConvertToHtmlRequest": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "language": {
+            "type": "string",
+            "nullable": true
+          },
+          "theme": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MarkdownRequest": {
+        "type": "object",
+        "properties": {
+          "markdown": {
+            "type": "string",
+            "nullable": true
+          },
+          "template": {
+            "type": "string",
+            "nullable": true
+          },
+          "outputFormat": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/OutputFormat"
+              }
+            ]
+          },
+          "theme": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OutputFormat": {
+        "enum": [
+          "Html",
+          "Email"
+        ],
+        "type": "string"
+      }
+    },
+    "securitySchemes": {
+      "ApiKey": {
+        "type": "apiKey",
+        "name": "X-API-Key",
+        "in": "header"
+      }
+    }
+  },
+  "security": [
+    {
+      "ApiKey": [ ]
+    }
+  ]
+}
