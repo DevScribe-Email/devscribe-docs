@@ -7,6 +7,7 @@
     "@mdx-js/react": "^3.0.0",
     "clsx": "^1.2.1",
     "docusaurus-preset-openapi": "0.7.5",
+    "gh-pages": "^6.1.1",
     "prism-react-renderer": "^2.1.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -21,7 +22,8 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [

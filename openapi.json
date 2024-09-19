@@ -4,6 +4,12 @@
     "title": "DevScribe.Api",
     "version": "1.0"
   },
+  "servers": [
+    {
+      "url": "https://backend.devscribe.email",
+      "description": "Production API Server"
+    }
+  ],
   "paths": {
     "/code-snippet/toHtml": {
       "post": {

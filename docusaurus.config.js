@@ -16,7 +16,7 @@ const config = {
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
   organizationName: "DevScribe-Email", // Usually your GitHub org/user name.
-  projectName: "svelte-devscribe", // Usually your repo name.
+  projectName: "devscribe-docs", // Usually your repo name.
   presets: [
     [
       "docusaurus-preset-openapi",
